@@ -71,11 +71,11 @@ const searchInput = document.getElementById("search");
 searchInput.addEventListener("input", (event) => {
   let value = event.target.value;
   if (value && value.trim().length > 0) {
-    // value = value.trim().toLowerCase();
+    value = value.trim().toLowerCase();
     setList(
       citati
         .filter((citat) => {
-          return citat.name.match(value);
+          return citat.name.toLowerCase().match(value);
         })
         .sort((citatA, citatB) => {
           return (
