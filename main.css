@@ -51,7 +51,6 @@ body {
   margin-left: 50px;
   text-align: center;
   font-family: opensans;
-  font-size: 25px;
   border-radius: 25px;
 }
 
@@ -107,24 +106,107 @@ body {
   padding: 15px;
 }
 
-@media only screen and (min-width: 360px) {
+/*
+# Mobile
+only screen and (min-width: 480px)
+
+# Tablet
+only screen and (min-width: 768px) 
+
+# Desktop
+only screen and (min-width: 992px)
+
+# Huge
+only screen and (min-width: 1280px) 
+*/
+@media only screen and (min-width: 300px) and (max-width: 765px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 80px 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr;
+    background-color: purple;
+    font-size: smaller;
+    padding: 0;
+  }
   #quote-generator {
-    height: 400px;
-    width: 300px;
+    margin: 0;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    height: 350px;
+    width: 350px;
+  }
+  .title {
+    grid-column-end: 3;
+  }
+  .list {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    margin-bottom: 25px;
+    margin-left: 0;
   }
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 480px) and (max-width: 765px) {
+  .container {
+    background-color: green;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 80px 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr;
+    font-size: smaller;
+    padding: 0;
+  }
+  .title {
+    grid-column-end: 3;
+  }
   #quote-generator {
-    height: 400px;
-    width: 320px;
+    height: 300px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    background-color: blue;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10px 1fr 1fr 10px;
+        grid-template-columns: 10px 1fr 1fr 10px;
+    -ms-grid-rows: 80px 1fr 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr 1fr;
+    font-size: smaller;
+    padding: 0;
+  }
+  #quote-generator {
+    grid-row-end: 4;
+    margin-top: 25px;
+    margin-left: 0;
+  }
+  #btn {
+    width: 80%;
   }
   #output {
     margin: 25px 10px;
   }
+  .list {
+    grid-row-end: 4;
+    margin-top: 25px;
+    margin-left: 0;
+  }
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: 992px) and (max-width: 1279px) {
+  .container {
+    background-color: red;
+  }
   #quote-generator {
     height: 400px;
     width: 360px;
@@ -134,20 +216,16 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
+  .container {
+    background-color: orange;
+  }
   #quote-generator {
     height: 400px;
     width: 600px;
   }
   #output {
     margin: 25px 10px;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  #quote-generator {
-    height: 300px;
-    width: 750px;
   }
 }
 /*# sourceMappingURL=main.css.map */
