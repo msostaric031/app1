@@ -1,0 +1,153 @@
+@font-face {
+  src: url(fonts/OpenSansCondensed-Light.ttf);
+  font-family: opensans;
+}
+
+@font-face {
+  src: url(fonts/OpenSansCondensed-Bold.ttf);
+  font-family: opensansbold;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50px 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template: 50px 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  background: #fcc883;
+}
+
+.title {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: opensans;
+}
+
+#quote-generator {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff1a2;
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: center;
+  font-family: opensans;
+  font-size: 25px;
+  border-radius: 25px;
+}
+
+.list {
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 25px;
+  font-family: opensans;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 10px;
+  background: #fff1a2;
+  margin-left: 20px;
+}
+
+#btn {
+  margin: 50px auto;
+  height: 50px;
+  width: 250px;
+  font-size: 25px;
+  background-color: transparent;
+  font-family: opensans;
+  border-radius: 5px;
+}
+
+#output {
+  margin: 25px;
+  font-size: 26px;
+  color: #000;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:active {
+  -webkit-box-shadow: 0 5px #666;
+          box-shadow: 0 5px #666;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-group {
+  list-style: disc;
+  padding: 15px;
+}
+
+@media only screen and (min-width: 360px) {
+  #quote-generator {
+    height: 400px;
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  #quote-generator {
+    height: 400px;
+    width: 320px;
+  }
+  #output {
+    margin: 25px 10px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  #quote-generator {
+    height: 400px;
+    width: 360px;
+  }
+  #output {
+    margin: 25px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #quote-generator {
+    height: 400px;
+    width: 600px;
+  }
+  #output {
+    margin: 25px 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #quote-generator {
+    height: 300px;
+    width: 750px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
