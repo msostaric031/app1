@@ -4,23 +4,33 @@ let btn = document.getElementById("btn");
 let output = document.getElementById("output");
 
 const citati = [
-  { name: "First, solve the problem. Then, write the code. – John Johnson" },
-  { name: "Java is to JavaScript what car is to Carpet. – Chris Heilmann" },
   {
-    name: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. – Martin Fowler",
+    id: 1,
+    name: "First, solve the problem. Then, write the code. - John Johnson",
   },
   {
-    name: "Code is like humor. When you have to explain it, it’s bad. – Cory House",
+    id: 2,
+    name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann",
   },
   {
+    id: 3,
+    name: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
+  },
+  {
+    id: 4,
+    name: "Code is like humor. When you have to explain it, it's bad. - Cory House",
+  },
+  {
+    id: 5,
     name: "Optimism is an occupational hazard of programming: feedback is the treatment. - Kent Beck",
   },
-  { name: "Simplicity is the soul of efficiency. – Austin Freeman" },
+  { id: 6, name: "Simplicity is the soul of efficiency. - Austin Freeman" },
   {
-    name: "Before software can be reusable it first has to be usable. – Ralph Johnson",
+    id: 7,
+    name: "Before software can be reusable it first has to be usable. - Ralph Johnson",
   },
-  { name: "It’s harder to read code than to write it. — Joel Spolsky" },
-  { name: "Deleted code is debugged code. - Jeff Sickel" },
+  { id: 8, name: "It's harder to read code than to write it. — Joel Spolsky" },
+  { id: 9, name: "Deleted code is debugged code. - Jeff Sickel" },
 ];
 
 btn.addEventListener("click", function () {
@@ -86,4 +96,10 @@ searchInput.addEventListener("input", (event) => {
   } else {
     clearList();
   }
+});
+
+btnCreate.addEventListener("click", function () {
+  citati.push({
+    name: prompt("Unesite citat i autora u formatu: citat - autor"),
+  });
 });
