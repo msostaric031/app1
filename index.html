@@ -26,9 +26,10 @@
      
       </div>
       <div id="quote-generator">
-        <button id="btn" class="btn">Press for a new quote!</button>
+        <button id="btn" class="btn" onclick="randomCitat()">Press for a new quote!</button>
         <div id="output">Press the button to generate a Quote!</div>
-        <button id="btnCreate">+</button>
+        <button id="btnCreate">Add</button>
+        <button id="btnUpdate" onclick="updateCitat(randomCitat(), prompt('Unesite novi citat'))">Update</button>
       </div>
     </div>
     

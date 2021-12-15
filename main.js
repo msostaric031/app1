@@ -4,39 +4,29 @@ let btn = document.getElementById("btn");
 let output = document.getElementById("output");
 
 const citati = [
+  { name: "First, solve the problem. Then, write the code. - John Johnson" },
+  { name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann" },
   {
-    id: 1,
-    name: "First, solve the problem. Then, write the code. - John Johnson",
-  },
-  {
-    id: 2,
-    name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann",
-  },
-  {
-    id: 3,
     name: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
   },
   {
-    id: 4,
     name: "Code is like humor. When you have to explain it, it's bad. - Cory House",
   },
   {
-    id: 5,
     name: "Optimism is an occupational hazard of programming: feedback is the treatment. - Kent Beck",
   },
-  { id: 6, name: "Simplicity is the soul of efficiency. - Austin Freeman" },
+  { name: "Simplicity is the soul of efficiency. - Austin Freeman" },
   {
-    id: 7,
     name: "Before software can be reusable it first has to be usable. - Ralph Johnson",
   },
-  { id: 8, name: "It's harder to read code than to write it. — Joel Spolsky" },
-  { id: 9, name: "Deleted code is debugged code. - Jeff Sickel" },
+  { name: "It's harder to read code than to write it. — Joel Spolsky" },
+  { name: "Deleted code is debugged code. - Jeff Sickel" },
 ];
 
-btn.addEventListener("click", function () {
+function randomCitat() {
   let randomQuote = citati[Math.floor(Math.random() * citati.length)].name;
   output.innerHTML = randomQuote;
-});
+}
 
 const list = document.getElementById("list");
 
@@ -103,3 +93,13 @@ btnCreate.addEventListener("click", function () {
     name: prompt("Unesite citat i autora u formatu: citat - autor"),
   });
 });
+
+const updateCitat = function (oldQuote, newQuote) {
+  let citatUpdateIndex = citati.findIndex((citat) => {
+    return citat.name === oldQuote;
+  });
+
+  citati[citatUpdateIndex].name = newQuote;
+};
+
+console.log(typeof citati[0].name);

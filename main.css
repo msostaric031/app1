@@ -169,7 +169,6 @@ body {
         grid-template-columns: 10px 1fr 1fr 10px;
     -ms-grid-rows: 80px 1fr 1fr 1fr;
         grid-template-rows: 80px 1fr 1fr 1fr;
-    font-size: smaller;
     padding: 0;
   }
   #quote-generator {
@@ -187,6 +186,7 @@ body {
     grid-row-end: 4;
     margin-top: 25px;
     margin-left: 0;
+    margin-right: 40px;
   }
 }
 
