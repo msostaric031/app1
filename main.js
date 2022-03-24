@@ -1,32 +1,44 @@
 "use strict";
 
-let btn = document.getElementById("btn");
-let output = document.getElementById("output");
+// let btn = document.getElementById("btn");
+// let output = document.getElementById("output");
 
 const citati = [
-  { name: "First, solve the problem. Then, write the code. - John Johnson" },
-  { name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann" },
   {
+    id: 1,
+    name: "First, solve the problem. Then, write the code. - John Johnson",
+  },
+  {
+    id: 2,
+    name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann",
+  },
+  {
+    id: 3,
     name: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
   },
   {
+    id: 4,
     name: "Code is like humor. When you have to explain it, it's bad. - Cory House",
   },
   {
+    id: 5,
     name: "Optimism is an occupational hazard of programming: feedback is the treatment. - Kent Beck",
   },
-  { name: "Simplicity is the soul of efficiency. - Austin Freeman" },
+  { id: 6, name: "Simplicity is the soul of efficiency. - Austin Freeman" },
   {
+    id: 7,
     name: "Before software can be reusable it first has to be usable. - Ralph Johnson",
   },
-  { name: "It's harder to read code than to write it. — Joel Spolsky" },
-  { name: "Deleted code is debugged code. - Jeff Sickel" },
+  { id: 8, name: "It's harder to read code than to write it. — Joel Spolsky" },
+  { id: 9, name: "Deleted code is debugged code. - Jeff Sickel" },
 ];
 
-function randomCitat() {
-  let randomQuote = citati[Math.floor(Math.random() * citati.length)].name;
-  output.innerHTML = randomQuote;
-}
+// Funkcija za random citat
+
+document.querySelector(".randomQuote").addEventListener("click", function () {
+  document.querySelector(".txt").textContent =
+    citati[Math.floor(Math.random() * citati.length)].name;
+});
 
 const list = document.getElementById("list");
 
@@ -88,12 +100,14 @@ searchInput.addEventListener("input", (event) => {
   }
 });
 
+// Create
 btnCreate.addEventListener("click", function () {
   citati.push({
-    name: prompt("Unesite citat i autora u formatu: citat - autor"),
+    name: prompt("Unesite citat i autora u obliku: citat - autor"),
   });
 });
 
+// Update citat
 const updateCitat = function (oldQuote, newQuote) {
   let citatUpdateIndex = citati.findIndex((citat) => {
     return citat.name === oldQuote;
@@ -101,5 +115,12 @@ const updateCitat = function (oldQuote, newQuote) {
 
   citati[citatUpdateIndex].name = newQuote;
 };
+const outputTxt = document.querySelector(".txt").textContent;
 
-console.log(typeof citati[0].name);
+function objIndex(citat) {
+  return citat.name === outputTxt;
+}
+
+document.querySelector(".check").addEventListener("click", function () {
+  console.log(citati.findIndex(objIndex));
+});
