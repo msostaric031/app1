@@ -4,33 +4,23 @@
 // let output = document.getElementById("output");
 
 const citati = [
+  { name: "First, solve the problem. Then, write the code. - John Johnson" },
+  { name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann" },
   {
-    id: 1,
-    name: "First, solve the problem. Then, write the code. - John Johnson",
-  },
-  {
-    id: 2,
-    name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann",
-  },
-  {
-    id: 3,
     name: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
   },
   {
-    id: 4,
     name: "Code is like humor. When you have to explain it, it's bad. - Cory House",
   },
   {
-    id: 5,
     name: "Optimism is an occupational hazard of programming: feedback is the treatment. - Kent Beck",
   },
-  { id: 6, name: "Simplicity is the soul of efficiency. - Austin Freeman" },
+  { name: "Simplicity is the soul of efficiency. - Austin Freeman" },
   {
-    id: 7,
     name: "Before software can be reusable it first has to be usable. - Ralph Johnson",
   },
-  { id: 8, name: "It's harder to read code than to write it. — Joel Spolsky" },
-  { id: 9, name: "Deleted code is debugged code. - Jeff Sickel" },
+  { name: "It's harder to read code than to write it. — Joel Spolsky" },
+  { name: "Deleted code is debugged code. - Jeff Sickel" },
 ];
 
 // Funkcija za random citat
@@ -115,12 +105,11 @@ const updateCitat = function (oldQuote, newQuote) {
 
   citati[citatUpdateIndex].name = newQuote;
 };
-const outputTxt = document.querySelector(".txt").textContent;
 
-function objIndex(citat) {
-  return citat.name === outputTxt;
-}
-
+// Index
 document.querySelector(".check").addEventListener("click", function () {
-  console.log(citati.findIndex(objIndex));
+  const outputTxt = document.querySelector(".txt").textContent;
+  console.log(outputTxt);
+  const index = citati.findIndex((x) => x.name === outputTxt);
+  console.log(index);
 });
