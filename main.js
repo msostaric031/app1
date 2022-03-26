@@ -1,8 +1,5 @@
 "use strict";
 
-// let btn = document.getElementById("btn");
-// let output = document.getElementById("output");
-
 const citati = [
   { name: "First, solve the problem. Then, write the code. - John Johnson" },
   { name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann" },
@@ -23,7 +20,7 @@ const citati = [
   { name: "Deleted code is debugged code. - Jeff Sickel" },
 ];
 
-// Funkcija za random citat
+// Funkcija za nasumično generiranje citata
 
 document.querySelector(".randomQuote").addEventListener("click", function () {
   document.querySelector(".txt").textContent =
@@ -90,6 +87,8 @@ searchInput.addEventListener("input", (event) => {
   }
 });
 
+// --CRUD--
+
 // Create
 btnCreate.addEventListener("click", function () {
   citati.push({
@@ -97,19 +96,36 @@ btnCreate.addEventListener("click", function () {
   });
 });
 
-// Update citat
-const updateCitat = function (oldQuote, newQuote) {
-  let citatUpdateIndex = citati.findIndex((citat) => {
-    return citat.name === oldQuote;
-  });
-
-  citati[citatUpdateIndex].name = newQuote;
-};
-
-// Index
-document.querySelector(".check").addEventListener("click", function () {
+// Read
+document.querySelector(".read").addEventListener("click", function () {
   const outputTxt = document.querySelector(".txt").textContent;
-  console.log(outputTxt);
+  const index = citati.findIndex((x) => x.name === outputTxt);
+  alert(outputTxt + "  - Index: " + index);
+});
+
+// Update citat
+document.querySelector(".update").addEventListener("click", function () {
+  const outputTxt = document.querySelector(".txt").textContent;
   const index = citati.findIndex((x) => x.name === outputTxt);
   console.log(index);
+
+  if (index >= 0) {
+    citati[index] = {
+      name: prompt("Unesite citat i autora u obliku: citat - autor"),
+    };
+  } else {
+    alert("Prvo generirajte citat koji želite promijeniti!");
+  }
+});
+
+// Delete
+document.querySelector(".delete").addEventListener("click", function () {
+  const outputTxt = document.querySelector(".txt").textContent;
+  const index = citati.findIndex((x) => x.name === outputTxt);
+
+  if (index >= 0) {
+    citati.splice(index, 1);
+  } else {
+    alert("Prvo generirajte citat koji želite obrisati!");
+  }
 });
