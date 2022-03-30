@@ -1,0 +1,49 @@
+@import "config";
+@import "buttons";
+@import "variables";
+
+.list {
+  @extend %mutual;
+  min-height: 200px;
+  width: 290px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px 50px;
+  font-size: 13px;
+
+  .list-group {
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.quote-generator {
+  @extend %mutual;
+  width: 450px;
+  text-align: center;
+  margin: 15px 50px;
+  border-radius: 5px;
+
+  .btn {
+    margin: 40px 10px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .randomQuote {
+    margin: 20px;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .txt {
+    position: relative;
+    top: 5%;
+  }
+
+  * {
+    padding: 10px 80px;
+  }
+}

@@ -1,0 +1,20 @@
+@import "variables";
+
+@mixin btnProperties {
+  border: $primary-color 1px solid;
+  box-shadow: $shadow-style-btn;
+  background-color: transparent;
+  color: $secondary-color;
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.btn {
+  @include btnProperties();
+}
+
+.randomQuote {
+  @include btnProperties();
+}

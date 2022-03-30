@@ -27,7 +27,7 @@ document.querySelector(".randomQuote").addEventListener("click", function () {
     citati[Math.floor(Math.random() * citati.length)].name;
 });
 
-const list = document.getElementById("list");
+const list = document.querySelector(".list-group");
 
 function setList(group) {
   clearList();
@@ -65,7 +65,7 @@ function getRelevancy(value, term, searchTerm) {
   }
 }
 
-const searchInput = document.getElementById("search");
+const searchInput = document.querySelector(".search");
 
 searchInput.addEventListener("input", (event) => {
   let value = event.target.value;
@@ -90,7 +90,7 @@ searchInput.addEventListener("input", (event) => {
 // --CRUD--
 
 // Create
-btnCreate.addEventListener("click", function () {
+document.querySelector(".create").addEventListener("click", function () {
   citati.push({
     name: prompt("Unesite citat i autora u obliku: citat - autor"),
   });

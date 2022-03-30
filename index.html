@@ -4,39 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Quote Generator</title>
   </head>
   <body>
     <div class="container">
-      <div class="title">- Quote Generator -</div>
       <div class="list">
-        <h4>Pretražite citat:</h2>
+        <h2>Pretražite citat:</h2>
         <input
           autofocus
           placeholder="search"
-          class="input"
+          class="input search"
           type="text"
           autocomplete="off"
           name="search"
-          id="search"
         />
 
-          <ul class="list-group" id="list"></ul>
-     
+        <ul class="list-group"></ul>
       </div>
-      <div id="quote-generator">
-        <button id="btn" class="btn randomQuote">Pritisnite za novi citat!</button>
-        <div id="output" class="txt">Pritisnite gumb za generiranje citata!</div>
-        <button id="btnCreate">Dodaj</button>
-        <button class="read">Očitaj</button>
-        <button id="btnUpdate"  class="update">Promijeni</button>
-        <button class="delete">Obriši</button>
-        
+      <div class="quote-generator">
+        <button class="randomQuote">Pritisnite za novi citat!</button>
+        <div class="txt">Pritisnite gumb za generiranje citata!</div>
+        <button class="btn create">Dodaj</button>
+        <button class="btn read">Očitaj</button>
+        <button class="btn update">Promijeni</button>
+        <button class="btn delete">Obriši</button>
       </div>
     </div>
-    
-    
+
     <script src="main.js"></script>
   </body>
 </html>
