@@ -13,6 +13,8 @@
 
 .btn {
   @include btnProperties();
+  position: relative;
+  top: 10%;
 }
 
 .randomQuote {
