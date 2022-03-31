@@ -50,7 +50,7 @@ function clearList() {
 
 function setNoResults() {
   const item = document.createElement("li");
-  const text = document.createTextNode("No results found");
+  const text = document.createTextNode("Nema rezultata.");
   item.appendChild(text);
   list.appendChild(item);
 }

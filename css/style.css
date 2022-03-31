@@ -12,7 +12,8 @@ body {
   display: flex;
   padding: 10px;
   gap: 5px;
-  background-color: #e9a17b;
+  background: -webkit-gradient(linear, right bottom, left top, from(#ff5e37), to(#dd9b77));
+  background: linear-gradient(to top left, #ff5e37, #dd9b77);
   border-radius: 10px;
   position: absolute;
   right: 0;
@@ -59,7 +60,7 @@ body {
 
 .list {
   min-height: 200px;
-  width: 290px;
+  width: 30%;
   border-radius: 5px;
   padding: 10px;
   margin: 15px 50px;
@@ -74,10 +75,11 @@ body {
 }
 
 .quote-generator {
-  width: 450px;
+  width: 45%;
   text-align: center;
   margin: 15px 50px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .quote-generator .btn {
@@ -95,6 +97,7 @@ body {
 .quote-generator .txt {
   position: relative;
   top: 5%;
+  overflow: hidden;
 }
 
 .quote-generator * {
