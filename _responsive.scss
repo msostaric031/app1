@@ -1,0 +1,48 @@
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 580px;
+    max-height: 290px;
+    padding: 3px;
+    font-size: 8px;
+
+    .quote-generator {
+      box-shadow: $shadow-style-btn;
+      width: 70%;
+      margin: 10px;
+    }
+
+    .list {
+      font-size: 10px;
+      box-shadow: $shadow-style-btn;
+      width: 40%;
+      margin: 10px;
+
+      .input {
+        width: 90%;
+      }
+    }
+    .btn {
+      box-shadow: $shadow-style-btn-small;
+      padding: 5px;
+      font-size: 10px;
+      margin: 10px 5px;
+    }
+    .randomQuote {
+      box-shadow: $shadow-style-btn-small;
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

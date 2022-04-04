@@ -100,7 +100,7 @@ document.querySelector(".create").addEventListener("click", function () {
 document.querySelector(".read").addEventListener("click", function () {
   const outputTxt = document.querySelector(".txt").textContent;
   const index = citati.findIndex((x) => x.name === outputTxt);
-  alert(outputTxt + "  - Index: " + index);
+  alert(outputTxt + "  -> Index: " + index);
 });
 
 // Update citat

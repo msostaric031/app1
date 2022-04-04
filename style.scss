@@ -1,6 +1,7 @@
 @import "config";
 @import "buttons";
 @import "variables";
+@import "responsive";
 
 .list {
   @extend %mutual;
@@ -12,7 +13,7 @@
   font-size: 13px;
 
   .list-group {
-    width: 200px;
+    max-width: 200px;
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -27,25 +28,10 @@
   border-radius: 5px;
   font-weight: bold;
 
-  .btn {
-    margin: 40px 10px;
-    padding: 10px;
-    border-radius: 15px;
-  }
-
-  .randomQuote {
-    margin: 20px;
-    border-radius: 15px;
-    padding: 10px;
-  }
-
   .txt {
     position: relative;
     top: 5%;
     overflow: hidden;
-  }
-
-  * {
-    padding: 10px 80px;
+    padding: 0 10px;
   }
 }

@@ -5,13 +5,12 @@ body {
 
 .container {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 500px;
+  min-height: 500px;
   max-width: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
-  gap: 5px;
   background: -webkit-gradient(linear, right bottom, left top, from(#ff5e37), to(#dd9b77));
   background: linear-gradient(to top left, #ff5e37, #dd9b77);
   border-radius: 10px;
@@ -36,6 +35,9 @@ body {
           box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
   background-color: transparent;
   color: #f5f5f5;
+  margin: 40px 10px;
+  padding: 10px;
+  border-radius: 15px;
   position: relative;
   top: 10%;
 }
@@ -51,11 +53,55 @@ body {
           box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
   background-color: transparent;
   color: #f5f5f5;
+  margin: 40px 10px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .randomQuote:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 580px;
+    max-height: 290px;
+    padding: 3px;
+    font-size: 8px;
+  }
+  .container .quote-generator {
+    -webkit-box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
+            box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
+    width: 70%;
+    margin: 10px;
+  }
+  .container .list {
+    font-size: 10px;
+    -webkit-box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
+            box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
+    width: 40%;
+    margin: 10px;
+  }
+  .container .list .input {
+    width: 90%;
+  }
+  .container .btn {
+    -webkit-box-shadow: 0 0 0 2px #f5f2e3, 0 0 0 3px #7e7e7e;
+            box-shadow: 0 0 0 2px #f5f2e3, 0 0 0 3px #7e7e7e;
+    padding: 5px;
+    font-size: 10px;
+    margin: 10px 5px;
+  }
+  .container .randomQuote {
+    -webkit-box-shadow: 0 0 0 2px #f5f2e3, 0 0 0 3px #7e7e7e;
+            box-shadow: 0 0 0 2px #f5f2e3, 0 0 0 3px #7e7e7e;
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 
 .list {
@@ -68,7 +114,7 @@ body {
 }
 
 .list .list-group {
-  width: 200px;
+  max-width: 200px;
   padding: 20px;
   position: relative;
   overflow: hidden;
@@ -82,25 +128,10 @@ body {
   font-weight: bold;
 }
 
-.quote-generator .btn {
-  margin: 40px 10px;
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.quote-generator .randomQuote {
-  margin: 20px;
-  border-radius: 15px;
-  padding: 10px;
-}
-
 .quote-generator .txt {
   position: relative;
   top: 5%;
   overflow: hidden;
-}
-
-.quote-generator * {
-  padding: 10px 80px;
+  padding: 0 10px;
 }
 /*# sourceMappingURL=style.css.map */
