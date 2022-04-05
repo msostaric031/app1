@@ -3,7 +3,11 @@
     max-width: 580px;
     max-height: 290px;
     padding: 3px;
-    font-size: 8px;
+    font-size: 10px;
+
+    .list-group {
+      font-size: calc(7.7px);
+    }
 
     .quote-generator {
       box-shadow: $shadow-style-btn;
@@ -35,14 +39,21 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
-}
+@media only screen and (max-width: 768px) {
+  .container {
+    .list {
+      box-shadow: $shadow-style-med;
+      width: 40%;
+      margin: 10px;
 
-@media only screen and (min-width: 768px) {
-}
-
-@media only screen and (min-width: 992px) {
-}
-
-@media only screen and (min-width: 1200px) {
+      .input {
+        width: 90%;
+      }
+    }
+    .quote-generator {
+      box-shadow: $shadow-style-med;
+      width: 70%;
+      margin: 10px;
+    }
+  }
 }

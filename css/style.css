@@ -71,7 +71,10 @@ body {
     max-width: 580px;
     max-height: 290px;
     padding: 3px;
-    font-size: 8px;
+    font-size: 10px;
+  }
+  .container .list-group {
+    font-size: calc(7.7px);
   }
   .container .quote-generator {
     -webkit-box-shadow: 0 0 0 4px #f5f2e3, 0 0 0 5px #7e7e7e;
@@ -104,6 +107,24 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .container .list {
+    -webkit-box-shadow: 0 0 0 6px #f5f2e3, 0 0 0 7px #7e7e7e;
+            box-shadow: 0 0 0 6px #f5f2e3, 0 0 0 7px #7e7e7e;
+    width: 40%;
+    margin: 10px;
+  }
+  .container .list .input {
+    width: 90%;
+  }
+  .container .quote-generator {
+    -webkit-box-shadow: 0 0 0 6px #f5f2e3, 0 0 0 7px #7e7e7e;
+            box-shadow: 0 0 0 6px #f5f2e3, 0 0 0 7px #7e7e7e;
+    width: 70%;
+    margin: 10px;
+  }
+}
+
 .list {
   min-height: 200px;
   width: 30%;
@@ -118,6 +139,7 @@ body {
   padding: 20px;
   position: relative;
   overflow: hidden;
+  text-align: justify;
 }
 
 .quote-generator {
