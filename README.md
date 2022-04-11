@@ -1,2 +1,3 @@
 # app1
-College project.
+
+Zadatak za stručni razgovor.

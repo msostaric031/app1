@@ -1,0 +1,28 @@
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "description": "Zadatak za stručni razgovor",
+  "main": "transpiled/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel main.js -d transpiled"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msostaric-hub/app1.git"
+  },
+  "keywords": [
+    "Quote",
+    "generator"
+  ],
+  "author": "Marko Šoštarić",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msostaric-hub/app1/issues"
+  },
+  "homepage": "https://github.com/msostaric-hub/app1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9"
+  }
+}
