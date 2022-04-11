@@ -1,5 +1,3 @@
-"use strict";
-
 const citati = [
   { name: "First, solve the problem. Then, write the code. - John Johnson" },
   { name: "Java is to JavaScript what car is to Carpet. - Chris Heilmann" },
