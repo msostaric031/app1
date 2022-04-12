@@ -121,6 +121,7 @@ document.querySelector(".update").addEventListener("click", function () {
     citati[index] = {
       name: prompt("Unesite citat i autora u obliku: citat - autor")
     };
+    alert("Citat je promijenjen.");
   } else {
     alert("Prvo generirajte citat koji želite promijeniti!");
   }
@@ -134,6 +135,7 @@ document.querySelector(".delete").addEventListener("click", function () {
 
   if (index >= 0) {
     citati.splice(index, 1);
+    alert("Citat \"".concat(outputTxt, "\" je obrisan."));
   } else {
     alert("Prvo generirajte citat koji želite obrisati!");
   }
